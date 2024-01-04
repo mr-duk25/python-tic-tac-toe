@@ -49,7 +49,7 @@ OFF_SWITCH = 1  #Flag; we want to set OFF_SWITCH to false or O
 # Create PlayerMove fxn (indicate whether it's X or O)
 def playermove(row,col):             # fxn def with multiple parameters
        #validate player move 
-   if(row < 0 or row > 3 or col < 0 or col > 3):      #Attempt at conditional
+   if(row < 0 or row > 3 or col < 0 or col > 3):     
        print("Invalid move")
    boardarray[row][col] = PLAYER[0]       # 2D array s[ecific indices assignment]
     
@@ -137,16 +137,8 @@ def game_loop():
    #check win conditions
         pvar = check_win_function(PLAYER, boardarray, row, col,OFF_SWITCH)
         # paolo = check_win_function(PLAYER, boardarray, row, col,OFF_SWITCH)
-        print("After Win fxn", OFF_SWITCH)
+      
         if(pvar == 0):
             break
-        print(OFF_SWITCH)
-        
-    #   identify if player has taken a space
-    # check if three spaces are next to each other in a single row/col/diagnol
-    #check draw conditions
-#initiate program
-
-    
 
 game_loop()
